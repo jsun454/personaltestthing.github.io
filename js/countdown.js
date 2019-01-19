@@ -1,7 +1,10 @@
 var time = Math.floor(Math.random() * 6) + 5;
-document.getElementById("countdownMessage").innerHTML = "Time until it has been " + time + " seconds since countdown began: ";
-
+var init = false;
 function countdown() {
+	if(!init) {
+		document.getElementById("countdownMessage").innerHTML = "Time until it has been " + time + " seconds since countdown began: ";
+		init = true;
+	}
 	postMessage(time);
 	if(time > 0) {
 		time--;
