@@ -81,6 +81,17 @@ p {
   width: 28px;
   height: 28px;
 }
+.button {
+  background-color: #4F4F4F;
+  margin: 0.25em 0.67em;
+  vertical-align: middle;
+  border: 1px solid #BCBCBC;
+  border-radius: 15px;
+  padding: 0.5em 0.75em;
+}
+.button:hover {
+  background-color: #7C7C7C;
+}
 </style></head>
 
 <body bgcolor="#7C7C7C">
@@ -91,12 +102,12 @@ p {
 <span class="title">Hawaii</span><img src="images/health_pack.png" alt="Hello from North Korea" class="center"></h1>
 <p class="text">I don't have anything to say here and neither do you.</p>
 <p class="text">Follow me on twitter: <a href="https://twitter.com/barackobama?lang=en">www.twitter.com/realDonaldTrump</a></p>
-<hr width="80%" align="left" style="margin: 0.67em">
+<hr width="80%" align="left" style="margin: 0.67em 0.67em 1em 0.67em">
 <div style="margin: 0.67em"><img src="images/tiles.png" alt="Please let go of me I can't breathe">
 <img src="images/valk.png" alt="What a nice day it is inside" style="margin: 0.67em 0.25em 0.67em 1.5em">
 <img src="images/valk_b.png" alt="Hello kittens" style="margin: 0.67em 0.25em">
 <img src="images/valk.png" alt="What a nice day it is inside" style="margin: 0.67em 0.25em 0.67em 0.25em">
 <img src="images/valk_b.png" alt="Hello kittens" style="margin: 0.67em 0.25em"></div>
-<button type="button" onclick="startCountdown()" style="margin: 0.25em 0.67em">Sample Text</button>
+<button class="text button" type="button" onclick="startCountdown()">Sample Text</button>
 <div id="hidden" class="text" style="display: none"><p id="countdownMessage">Time until countdown ends: <output id="countdown"></output></p></div>
 <script src="js/countdown.js"></script><script src="js/startCountdown.js"></script></body></html>
