@@ -6,13 +6,17 @@ function startCountdown() {
 			w = new Worker("js/countdown.js");
 		}
 		w.onmessage = function(event) {
-			document.getElementById("countdown").innerHTML = event.data;
-			if(event.data == 0) {
-				w.terminate();
-				w = undefined;
+			if(typeof(event.data) == "string") {
+				document.getElementById("countdownMessage").innerHTML = event.data;
+			} else {
+				document.getElementById("countdown").innerHTML = event.data;
+				if(event.data == 0) {
+					w.terminate();
+					w = undefined;
+				}
 			}
 		};
 	} else {
-		document.getElementById("countdown").innerHTML = "Nobody loves you"
+		document.getElementById("countdownMessage").innerHTML = "Nobody loves you";
 	}
 }
