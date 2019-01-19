@@ -8,6 +8,7 @@ function startCountdown() {
 		w.onmessage = function(event) {
 			if(typeof(event.data) == "string") {
 				document.getElementById("countdown").innerHTML = event.data;
+				document.getElementById("countdownMessage").innerHTML = event.data;
 			} else {
 				document.getElementById("countdown").innerHTML = event.data;
 				if(event.data == 0) {
