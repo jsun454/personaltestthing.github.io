@@ -1,4 +1,5 @@
 var w;
+console.log("test");
 function startCountdown() {
 	document.getElementById("hidden").style.display = "block";
 	if(typeof(Worker) !== "undefined") {
