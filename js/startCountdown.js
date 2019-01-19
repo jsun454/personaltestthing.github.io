@@ -5,15 +5,11 @@ function startCountdown() {
 		if(typeof(w) == "undefined") {
 			w = new Worker("js/countdown.js");
 		}
-		w.onmessage = function(event) {
-			if(typeof(event.data) == "string") {
-				document.getElementById("countdownMessage").innerHTML = event.data;
-			} else if(typeof(event.data) == "number") {
-				document.getElementById("countdown").innerHTML = event.data;
-				if(event.data == 0) {
-					w.terminate();
-					w = undefined;
-				}
+		w.onmessage = function(event) {;
+			document.getElementById("countdown").innerHTML = event.data;
+			if(event.data == 0) {
+				w.terminate();
+				w = undefined;
 			}
 		};
 	} else {
