@@ -1,6 +1,5 @@
 var w;
 function startCountdown() {
-	console.log("test");
 	document.getElementById("hidden").style.display = "block";
 	if(typeof(Worker) !== "undefined") {
 		if(typeof(w) == "undefined") {
@@ -9,6 +8,7 @@ function startCountdown() {
 		w.onmessage = function(event) {
 			if(typeof(event.data) == "string") {
 				document.getElementById("countdownMessage").innerHTML = event.data;
+				console.log("HI");
 			} else {
 				document.getElementById("countdown").innerHTML = event.data;
 				if(event.data == 0) {
