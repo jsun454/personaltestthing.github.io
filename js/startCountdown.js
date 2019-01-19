@@ -7,9 +7,8 @@ function startCountdown() {
 		}
 		w.onmessage = function(event) {
 			if(typeof(event.data) == "string") {
-				document.getElementById("countdown").innerHTML = event.data;
 				document.getElementById("countdownMessage").innerHTML = event.data;
-			} else {
+			} else if(typeof(event.data) == "number") {
 				document.getElementById("countdown").innerHTML = event.data;
 				if(event.data == 0) {
 					w.terminate();
