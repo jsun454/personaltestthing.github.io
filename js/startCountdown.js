@@ -9,7 +9,7 @@ function startCountdown() {
 			if(typeof(event.data) == "string") {
 				document.getElementById("countdownMessage").innerHTML = event.data;
 				document.getElementById("countodnw").innerHTML = 3;
-				console.log("HI");
+				console.log("A");
 			} else {
 				document.getElementById("countdown").innerHTML = event.data;
 				if(event.data == 0) {
