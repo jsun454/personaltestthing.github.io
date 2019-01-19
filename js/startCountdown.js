@@ -3,7 +3,13 @@ function startCountdown() {
 	document.getElementById("hidden").style.display = "block";
 	if(typeof(Worker) !== "undefined") {
 		if(typeof(w) == "undefined") {
-			w = new Worker("js/countdown.js");
+			try {
+				w = new Worker("js/countdown.js");
+			} catch(err) {
+				console.log(`Error: ${err.message}`);
+				document.getElementById("countdown").innerHTML = 0;
+				return;
+			}
 		}
 		w.onmessage = function(event) {;
 			document.getElementById("countdown").innerHTML = event.data;
