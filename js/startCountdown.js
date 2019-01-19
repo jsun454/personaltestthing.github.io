@@ -1,6 +1,6 @@
 var w;
-console.log("test");
 function startCountdown() {
+	console.log("test");
 	document.getElementById("hidden").style.display = "block";
 	if(typeof(Worker) !== "undefined") {
 		if(typeof(w) == "undefined") {
